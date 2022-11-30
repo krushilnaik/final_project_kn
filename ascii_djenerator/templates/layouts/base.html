@@ -12,7 +12,33 @@
     <title>ASCII Djenerator</title>
   </head>
 
-  <body class="w-screen min-h-screen bg-gray-900 text-slate-50 grid place-content-center">
-    {% block content %}{% endblock content %}
+  <body class="w-screen min-h-screen flex flex-col bg-gray-900 text-indigo-400">
+    <header class="flex justify-between">
+      <h1>a.dj</h1>
+
+      <nav>
+        <ul class="flex gap-8">
+          {% if user.is_authenticated %}
+            <li>
+              <span class="text-indigo-400/40">Welcome, {{ user }}!</span>
+            </li>
+            <li>
+              <a href="">Log Out</a>
+            </li>
+          {% else %}
+            <li><a href="">Register</a></li>
+            <li><a href="">Log In</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    </header>
+
+    <main class="grow grid place-content-center">
+      {% block content %}{% endblock content %}
+    </main>
+
+    <footer class="text-center">
+      INF-601 Final Project | Krushil Naik
+    </footer>
   </body>
 </html>
