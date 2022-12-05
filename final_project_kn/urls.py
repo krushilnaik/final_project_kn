@@ -16,8 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from . import views
+
 urlpatterns = [
     path('', include('ascii_djenerator.urls')),
     path('admin/', admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
+    path('auth/login', views.log_in, name="login"),
+    path('auth/logout', views.log_out, name="logout"),
+    path("auth/register", views.register, name="register"),
 ]

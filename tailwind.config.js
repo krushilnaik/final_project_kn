@@ -3,7 +3,7 @@ module.exports = {
   darkMode: "class",
   content: [
     // templates
-    "./ascii_djenerator/templates/**/*.html",
+    "./**/templates/**/*.html",
   ],
   theme: {
     extend: {},

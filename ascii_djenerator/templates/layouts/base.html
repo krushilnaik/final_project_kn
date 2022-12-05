@@ -14,7 +14,7 @@
 
   <body class="w-screen min-h-screen flex flex-col bg-gray-900 text-indigo-400">
     <header class="flex justify-between">
-      <h1>a.dj</h1>
+      <h1><a href="{% url 'home' %}">a.dj</a></h1>
 
       <nav>
         <ul class="flex gap-8">
@@ -23,11 +23,11 @@
               <span class="text-indigo-400/40">Welcome, {{ user }}!</span>
             </li>
             <li>
-              <a href="">Log Out</a>
+              <a href="{% url 'logout' %}">Log Out</a>
             </li>
           {% else %}
-            <li><a href="">Register</a></li>
-            <li><a href="">Log In</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'login' %}">Log in</a></li>
           {% endif %}
         </ul>
       </nav>

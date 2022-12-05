@@ -1,0 +1,13 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}  
+  <form class="flex flex-col gap-4" method="POST">
+    {% csrf_token %}
+
+    <input type="text" name="username" id="username" placeholder="Username:">
+    <input type="password" auto-complete="new-password" name="password" id="password" placeholder="Password:">
+
+    <button type="submit">Login</button>
+  </form>
+
+{% endblock content %}
