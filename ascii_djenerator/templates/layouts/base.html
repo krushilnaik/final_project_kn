@@ -20,7 +20,7 @@
         <ul class="flex gap-8">
           {% if user.is_authenticated %}
             <li>
-              <span class="text-indigo-400/40">Welcome, {{ user }}!</span>
+              <span class="text-indigo-400">Welcome, {{ user }}!</span>
             </li>
             <li>
               <a href="{% url 'logout' %}">Log Out</a>
@@ -37,7 +37,7 @@
       {% block content %}{% endblock content %}
     </main>
 
-    <footer class="text-center">
+    <footer class="text-center opacity-40">
       INF-601 Final Project | Krushil Naik
     </footer>
   </body>
