@@ -2,9 +2,11 @@
 Ascii Djenerator views
 """
 
-import sqlite3
+# import sqlite3
 
 from django.shortcuts import render
+
+from .models import Letter
 
 
 # Create your views here.
@@ -26,16 +28,14 @@ def generator(request):
 
         art = []
 
-        with sqlite3.connect('../alphabet.db') as conn:
-            for letter in query:
-                cur = conn.cursor()
-                cur.execute('SELECT * FROM letter WHERE letter = ?', (letter,))
+        for letter in query:
+            representation: str = Letter.objects.get(
+                letter=letter
+            ).representation
 
-                row = cur.fetchone()
+            art.append(representation.split('|'))
 
-                print(row)
-
-        # art = [request.POST['text'], 'art']
+        art = ["".join(line) for line in zip(*art)]
 
         return render(request, 'generator.html', {'art': art})
 
