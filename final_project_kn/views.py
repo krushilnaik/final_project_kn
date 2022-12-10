@@ -19,13 +19,11 @@ def log_in(request):
 
         if user is not None:
             login(request, user)
-            redirect("home")
+            return redirect("home")
         else:
             pass
 
-    form = "form goes here"
-
-    return render(request, "auth/login.html", {"form": form})
+    return render(request, "auth/login.html")
 
 
 def log_out(request):
