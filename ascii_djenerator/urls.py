@@ -8,4 +8,5 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name="home"),
+    path('generator', views.generator, name='generator')
 ]

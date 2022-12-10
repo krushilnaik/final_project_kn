@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Auth redirects
+
+LOGOUT_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "/generator"
+
 
 # Application definition
 

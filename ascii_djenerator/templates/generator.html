@@ -1,0 +1,33 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+  <div class="grid place-content-center bg-sky-800 rounded-lg h-[280px] max-w-[90vw] w-[750px] max-h-[20vh] gap-6">
+    <div class="m-auto font-mono">
+      {% if art %}
+        {% for line in art %}
+          <div class="flex gap-1">
+            {% for char in line %}
+              <span class="{% if char == '#' or error %} fg {% else %} bg {% endif %}">
+                {% if char == " " %}&nbsp;{% else %}{{char}}{% endif %}
+              </span>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      {% else %}
+        <h2 class="italic font-sans font-normal text-center text-emerald-200 text-xl">Your masterpiece</h2>
+      {% endif %}
+    </div>
+  </div>
+  <form class="mt-9 m-auto" method="post">
+    {% csrf_token %}
+    <input
+      class="rounded-full border-none w-80 px-4 py-2"
+      type="text" name="text" id="text"
+      placeholder="Type something:"
+      required maxlength="10"
+    />
+    <button type="submit">
+      <i class="fa-solid fa-pen-fancy"></i>
+    </button>
+  </form>
+{% endblock content %}

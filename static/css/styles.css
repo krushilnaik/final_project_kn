@@ -20,3 +20,13 @@
     @apply no-underline transition-colors hover:text-emerald-500;
   }
 }
+
+@layer components {
+  .fg {
+    color: tomato;
+  }
+
+  .bg {
+    color: dodgerblue;
+  }
+}
