@@ -290,6 +290,5 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-package.json
-yarn.lock
-*.config.js
+# TailwindCSS output
+static/css/output.css
