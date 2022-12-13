@@ -7,7 +7,7 @@
 
 ## Usage
 
-First, make sure you have Python 3.7+ installed
+First, make sure you have Python 3.8+ installed
 
 Run `pip install -r requirements.txt` to install all the dependencies
 
