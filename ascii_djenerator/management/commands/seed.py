@@ -37,12 +37,11 @@ def run_seed():
 
     clear_data()
 
-    alphabet_file = Path(__file__).parent / "alphabet.txt"
+    ALPHABET_FILE = Path(__file__).parent / "alphabet.txt"
 
     try:
         print("Trying to seed database...")
-
-        with open(alphabet_file, encoding="utf-8") as alphabet:
+        with open(ALPHABET_FILE, encoding="utf-8") as alphabet:
             letter = ""
             representation = ""
 
