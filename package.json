@@ -1,0 +1,17 @@
+{
+  "name": "final_project_kn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/krushilnaik/final_project_kn.git",
+  "author": "Krushil Naik <krushilnaik96@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "python ./manage.py runserver",
+    "style": "tailwindcss -i ./static/css/styles.css -o ./static/css/output.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4"
+  }
+}
