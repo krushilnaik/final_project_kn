@@ -289,3 +289,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+package.json
+yarn.lock
+*.config.js
