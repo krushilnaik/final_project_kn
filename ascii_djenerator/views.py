@@ -19,7 +19,7 @@ def index(request):
     return render(request, 'index.html')
 
 
-@login_required
+@login_required(login_url='/auth/login')
 def generator(request):
     """
     The generator page
@@ -33,7 +33,7 @@ def generator(request):
     return render(request, 'generator.html')
 
 
-@login_required
+@login_required(login_url='/auth/login')
 @require_POST
 def random(request):
     """
