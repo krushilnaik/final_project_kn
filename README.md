@@ -16,6 +16,7 @@ To initialize the database and seed the Letters table:
 ```
 python manage.py makemigrations
 python manage.py migrate
+python manage.py seed
 ```
 
 Run the app with `python ./manage.py runserver`
